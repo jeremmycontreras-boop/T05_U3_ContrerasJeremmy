@@ -1,0 +1,7 @@
+# Bitácora
+
+| Fecha | Predicción / decisión | Cambio | Prueba y evidencia | Commit |
+|---|---|---|---|---|
+| 2026-11-05 | **Predicción inicial:** Al aumentar el número de elementos ($n = 2, 4, 8$), el desplazamiento $u(L)$ convergerá a la solución analítica ($0.30\text{ mm}$) y el error en puntos medios se reducirá. Al imponer $u(L) = 0$ con 8 elementos, cambiará el problema de borde (de Neumann a Dirichlet), alterando desplazamientos y reacciones, aunque el equilibrio global cierre. | Registro de predicciones previas a la ejecución del solver. | Análisis previo a la simulación numérica. | `[Hash del Commit]` |
+| 2026-11-05 | **Ejecución y verificación:** Ejecución del script para mallas M2, M4 y M8. Comprobación del orden de convergencia $O(h^2)$ en puntos medios y validación del balance de fuerzas $< 10^{-8}$. | Validación numérica de resultados. | Obtención de CSVs, tabla de errores y gráfico de convergencia log-log. | `[Hash del Commit]` |
+| 2026-11-05 | **Diagnóstico de contorno:** Evaluación de `BC_ALTERADO` con $n=8$ aplicando $u(L)=0$. Verificación de la anulación del desplazamiento y redistribución de reacciones ($R_{izq}=-10000\text{ N}$, $R_{der}=-30000\text{ N}$). | Análisis del problema modificado. | Consistencia del equilibrio estático global y redacción del informe en LaTeX. | `[Hash del Commit]` |
